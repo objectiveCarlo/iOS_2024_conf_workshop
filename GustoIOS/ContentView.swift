@@ -15,42 +15,9 @@ struct ContentView: View {
     var body: some View {
         
         NavigationStack {
-            VStack {
-                if (dungeons.isEmpty) {
-                    Text("So Empty Dungeon")
-                } else {
-                    List {
-                        ForEach (dungeons, id: \.id) { dungeon in
-                            NavigationLink(value: dungeon) {
-                                Text("\(dungeon.name) is level \(dungeon.level) ")
-                            }
-                        }.onDelete(perform:deleteDungeons)
-                    }.navigationDestination(for: Dungeon.self) { dungeon in
-                        EditDungeonView(dungeon: dungeon)
-                    }
-                }
-            }
-            .navigationTitle("Solo Leveling")
-            .toolbar {
-                Button {
-                    showingAddView.toggle()
-                } label: {
-                    Label("Add Dungeon", systemImage: "plus")
-                }
-            }
-            .sheet(isPresented: $showingAddView) {
-                AddDungeonView()
-            }
-        }
+            DungeonListView()
         }
         
-    func deleteDungeons(_ indexSet: IndexSet) {
-        for item in indexSet {
-            let object = dungeons[item]
-            context.delete(object)
-            
-        }
-        try? context.save()
     }
         
 }
