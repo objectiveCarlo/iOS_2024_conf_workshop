@@ -13,9 +13,8 @@ struct ContentView: View {
     @Query(sort: [SortDescriptor(\Dungeon.level, order: .reverse)]) var dungeons: [Dungeon]
     @Environment(\.modelContext) private var context
     var body: some View {
-        
         NavigationStack {
-            DungeonListView()
+            DungeonListView(sort: SortDescriptor(\Dungeon.level, order: .reverse))
         }
         
     }

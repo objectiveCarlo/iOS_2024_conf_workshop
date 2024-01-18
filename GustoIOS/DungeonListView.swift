@@ -10,10 +10,15 @@ import SwiftData
 
 struct DungeonListView: View {
     @State private var showingAddView = false
-    @Query(sort: [SortDescriptor(\Dungeon.level, order: .reverse)]) var dungeons: [Dungeon]
+    @Query var dungeons: [Dungeon]
     @Environment(\.modelContext) private var context
-    var body: some View {
     
+    init(sort: SortDescriptor<Dungeon>) {
+        _dungeons = Query(sort: [sort])
+    }
+    
+    
+    var body: some View {
             VStack {
                 if (dungeons.isEmpty) {
                     Text("So Empty Dungeon")
@@ -52,5 +57,5 @@ struct DungeonListView: View {
     }
 }
 #Preview {
-    DungeonListView()
+    DungeonListView(sort: SortDescriptor(\Dungeon.level, order: .reverse))
 }
