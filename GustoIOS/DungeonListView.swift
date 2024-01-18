@@ -13,8 +13,15 @@ struct DungeonListView: View {
     @Query var dungeons: [Dungeon]
     @Environment(\.modelContext) private var context
     
-    init(sort: SortDescriptor<Dungeon>) {
-        _dungeons = Query(sort: [sort])
+    init(sort: SortDescriptor<Dungeon>, search: String?) {
+        if let search, !search.isEmpty {
+            _dungeons = Query(filter: #Predicate {
+                $0.name.starts(with: search)
+            }, sort: [sort])
+
+        } else {
+            _dungeons = Query(sort: [sort])
+        }
     }
     
     
@@ -23,6 +30,7 @@ struct DungeonListView: View {
                 if (dungeons.isEmpty) {
                     Text("So Empty Dungeon")
                 } else {
+                    Spacer()
                     List {
                         ForEach (dungeons, id: \.id) { dungeon in
                             NavigationLink(value: dungeon) {
@@ -32,6 +40,7 @@ struct DungeonListView: View {
                     }.navigationDestination(for: Dungeon.self) { dungeon in
                         EditDungeonView(dungeon: dungeon)
                     }
+                
                 }
             }
             .navigationTitle("Solo Leveling")
@@ -57,5 +66,5 @@ struct DungeonListView: View {
     }
 }
 #Preview {
-    DungeonListView(sort: SortDescriptor(\Dungeon.level, order: .reverse))
+    DungeonListView(sort: SortDescriptor(\Dungeon.level, order: .reverse), search: nil)
 }

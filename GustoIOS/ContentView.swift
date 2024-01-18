@@ -11,11 +11,14 @@ import SwiftData
 struct ContentView: View {
     @State private var showingAddView = false
     @Query(sort: [SortDescriptor(\Dungeon.level, order: .reverse)]) var dungeons: [Dungeon]
+    @State private var searchText = ""
     @Environment(\.modelContext) private var context
     var body: some View {
         NavigationStack {
-            DungeonListView(sort: SortDescriptor(\Dungeon.level, order: .reverse))
+            Spacer()
+            DungeonListView(sort: SortDescriptor(\Dungeon.level, order: .reverse), search: searchText)
         }
+        .searchable(text: $searchText)
         
     }
         
