@@ -57,13 +57,13 @@
 		E73AA06E2B58BC6A00E30CF2 /* GustoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				E73AA0812B58BF5500E30CF2 /* AddDungeonView.swift */,
 				E73AA07F2B58BDB200E30CF2 /* Dungeon.swift */,
 				E73AA07D2B58BD1900E30CF2 /* Player.swift */,
 				E73AA06F2B58BC6A00E30CF2 /* GustoIOSApp.swift */,
 				E73AA0712B58BC6A00E30CF2 /* ContentView.swift */,
 				E73AA0732B58BC6A00E30CF2 /* Assets.xcassets */,
 				E73AA0752B58BC6A00E30CF2 /* Preview Content */,
-				E73AA0812B58BF5500E30CF2 /* AddDungeonView.swift */,
 			);
 			path = GustoIOS;
 			sourceTree = "<group>";
