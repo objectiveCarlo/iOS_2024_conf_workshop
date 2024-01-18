@@ -6,17 +6,34 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @State private var showingAddView = false
+    @Query var dugeons: [Dungeon]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        NavigationStack {
+            VStack {
+                List(dugeons) { dungeon in
+                  Text("\(dungeon.name) is level \(dungeon.level) ")
+                }
+            }
+            .navigationTitle("Solo Leveling")
+            .toolbar {
+                Button {
+                    showingAddView.toggle()
+                } label: {
+                    Label("Add Dungeon", systemImage: "plus")
+                }
+            }
+            .sheet(isPresented: $showingAddView) {
+                AddDungeonView()
+            }
         }
-        .padding()
-    }
+        }
+        
+        
 }
 
 #Preview {
