@@ -15,6 +15,7 @@
 		E73AA0822B58BF5500E30CF2 /* AddDungeonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73AA0812B58BF5500E30CF2 /* AddDungeonView.swift */; };
 		E73AA0842B58C79D00E30CF2 /* EditDungeonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73AA0832B58C79D00E30CF2 /* EditDungeonView.swift */; };
 		E73AA0862B58E10F00E30CF2 /* DungeonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73AA0852B58E10F00E30CF2 /* DungeonListView.swift */; };
+		E78E5C632B58E7E10036E788 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E5C622B58E7E10036E788 /* Monster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E73AA0812B58BF5500E30CF2 /* AddDungeonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDungeonView.swift; sourceTree = "<group>"; };
 		E73AA0832B58C79D00E30CF2 /* EditDungeonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDungeonView.swift; sourceTree = "<group>"; };
 		E73AA0852B58E10F00E30CF2 /* DungeonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonListView.swift; sourceTree = "<group>"; };
+		E78E5C622B58E7E10036E788 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		E73AA06E2B58BC6A00E30CF2 /* GustoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				E78E5C622B58E7E10036E788 /* Monster.swift */,
 				E73AA0852B58E10F00E30CF2 /* DungeonListView.swift */,
 				E73AA0832B58C79D00E30CF2 /* EditDungeonView.swift */,
 				E73AA0812B58BF5500E30CF2 /* AddDungeonView.swift */,
@@ -155,6 +158,7 @@
 				E73AA0862B58E10F00E30CF2 /* DungeonListView.swift in Sources */,
 				E73AA0842B58C79D00E30CF2 /* EditDungeonView.swift in Sources */,
 				E73AA0702B58BC6A00E30CF2 /* GustoIOSApp.swift in Sources */,
+				E78E5C632B58E7E10036E788 /* Monster.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct AddDungeonView: View {
-    @State var dungeon: Dungeon = Dungeon(name: "God", level: 1, difficulty: 1, skillNeedded: 1)
+    @State var dungeon: Dungeon = Dungeon(name: "God", level: 1, difficulty: 1, skillNeedded: 1, monsters: [])
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var context
     

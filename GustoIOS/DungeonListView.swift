@@ -34,7 +34,7 @@ struct DungeonListView: View {
                     List {
                         ForEach (dungeons, id: \.id) { dungeon in
                             NavigationLink(value: dungeon) {
-                                Text("\(dungeon.name) is level \(dungeon.level) ")
+                                Text("\(dungeon.name) is level \(dungeon.level) monsters inside \(dungeon.monsters.count)")
                             }
                         }.onDelete(perform:deleteDungeons)
                     }.navigationDestination(for: Dungeon.self) { dungeon in
