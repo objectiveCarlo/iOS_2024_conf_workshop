@@ -13,6 +13,6 @@ struct GustoIOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }.modelContainer(for: Player.self)
+        }.modelContainer(for: Player.self).modelContainer(for: Dungeon.self)
     }
 }
