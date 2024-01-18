@@ -10,13 +10,16 @@ import SwiftData
 
 struct ContentView: View {
     @State private var showingAddView = false
-    @Query var dugeons: [Dungeon]
+    @Query var dungeons: [Dungeon]
+    @Environment(\.modelContext) private var context
     var body: some View {
         
         NavigationStack {
             VStack {
-                List(dugeons) { dungeon in
-                  Text("\(dungeon.name) is level \(dungeon.level) ")
+                List {
+                    ForEach (dungeons, id: \.id) { dungeon in
+                        Text("\(dungeon.name) is level \(dungeon.level) ")
+                    }.onDelete(perform:deleteDungeons)
                 }
             }
             .navigationTitle("Solo Leveling")
@@ -33,6 +36,14 @@ struct ContentView: View {
         }
         }
         
+    func deleteDungeons(_ indexSet: IndexSet) {
+        for item in indexSet {
+            let object = dungeons[item]
+            context.delete(object)
+            
+        }
+        try? context.save()
+    }
         
 }
 

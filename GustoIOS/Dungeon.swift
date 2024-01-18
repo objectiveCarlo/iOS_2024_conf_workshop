@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 class Dungeon {
+    @Attribute(.unique) var id: String = UUID().uuidString
     var name: String
     var level: Int
     var difficulty: Int
