@@ -16,14 +16,18 @@ struct ContentView: View {
         
         NavigationStack {
             VStack {
-                List {
-                    ForEach (dungeons, id: \.id) { dungeon in
-                        NavigationLink(value: dungeon) {
-                            Text("\(dungeon.name) is level \(dungeon.level) ")
-                        }
-                    }.onDelete(perform:deleteDungeons)
-                }.navigationDestination(for: Dungeon.self) { dungeon in
-                    EditDungeonView(dungeon: dungeon)
+                if (dungeons.isEmpty) {
+                    Text("So Empty Dungeon")
+                } else {
+                    List {
+                        ForEach (dungeons, id: \.id) { dungeon in
+                            NavigationLink(value: dungeon) {
+                                Text("\(dungeon.name) is level \(dungeon.level) ")
+                            }
+                        }.onDelete(perform:deleteDungeons)
+                    }.navigationDestination(for: Dungeon.self) { dungeon in
+                        EditDungeonView(dungeon: dungeon)
+                    }
                 }
             }
             .navigationTitle("Solo Leveling")
