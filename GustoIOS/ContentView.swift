@@ -18,8 +18,12 @@ struct ContentView: View {
             VStack {
                 List {
                     ForEach (dungeons, id: \.id) { dungeon in
-                        Text("\(dungeon.name) is level \(dungeon.level) ")
+                        NavigationLink(value: dungeon) {
+                            Text("\(dungeon.name) is level \(dungeon.level) ")
+                        }
                     }.onDelete(perform:deleteDungeons)
+                }.navigationDestination(for: Dungeon.self) { dungeon in
+                    EditDungeonView(dungeon: dungeon)
                 }
             }
             .navigationTitle("Solo Leveling")

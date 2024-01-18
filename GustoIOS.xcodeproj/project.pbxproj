@@ -14,6 +14,7 @@
 		E73AA07E2B58BD1900E30CF2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73AA07D2B58BD1900E30CF2 /* Player.swift */; };
 		E73AA0802B58BDB200E30CF2 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73AA07F2B58BDB200E30CF2 /* Dungeon.swift */; };
 		E73AA0822B58BF5500E30CF2 /* AddDungeonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73AA0812B58BF5500E30CF2 /* AddDungeonView.swift */; };
+		E73AA0842B58C79D00E30CF2 /* EditDungeonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73AA0832B58C79D00E30CF2 /* EditDungeonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E73AA07D2B58BD1900E30CF2 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E73AA07F2B58BDB200E30CF2 /* Dungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
 		E73AA0812B58BF5500E30CF2 /* AddDungeonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDungeonView.swift; sourceTree = "<group>"; };
+		E73AA0832B58C79D00E30CF2 /* EditDungeonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDungeonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		E73AA06E2B58BC6A00E30CF2 /* GustoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				E73AA0832B58C79D00E30CF2 /* EditDungeonView.swift */,
 				E73AA0812B58BF5500E30CF2 /* AddDungeonView.swift */,
 				E73AA07F2B58BDB200E30CF2 /* Dungeon.swift */,
 				E73AA07D2B58BD1900E30CF2 /* Player.swift */,
@@ -149,6 +152,7 @@
 				E73AA0802B58BDB200E30CF2 /* Dungeon.swift in Sources */,
 				E73AA0722B58BC6A00E30CF2 /* ContentView.swift in Sources */,
 				E73AA0822B58BF5500E30CF2 /* AddDungeonView.swift in Sources */,
+				E73AA0842B58C79D00E30CF2 /* EditDungeonView.swift in Sources */,
 				E73AA07E2B58BD1900E30CF2 /* Player.swift in Sources */,
 				E73AA0702B58BC6A00E30CF2 /* GustoIOSApp.swift in Sources */,
 			);
