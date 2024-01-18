@@ -10,7 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @State private var showingAddView = false
-    @Query var dungeons: [Dungeon]
+    @Query(sort: [SortDescriptor(\Dungeon.level, order: .reverse)]) var dungeons: [Dungeon]
     @Environment(\.modelContext) private var context
     var body: some View {
         
